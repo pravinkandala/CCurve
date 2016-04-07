@@ -32,7 +32,7 @@ public class FractalView extends View {
     protected void onDraw(Canvas canvas){
         //start coordinates
         x1 = canvas.getWidth()/3;
-        y2 = canvas.getHeight()/4;
+        y1 = canvas.getHeight()/4;
 
         //end coordinates
         x2 = canvas.getWidth() - x1;

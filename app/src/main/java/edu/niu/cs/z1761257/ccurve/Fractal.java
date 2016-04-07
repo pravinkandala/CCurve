@@ -13,7 +13,7 @@ public void drawCCurve(Canvas canvas, float x1, float y1, float x2, float y2, in
     //Create a Paint object
     Paint paint = new Paint();
     paint.setColor(lineColor);
-    paint.setStrokeWidth(1);
+    paint.setStrokeWidth(2);
 
     //base case for recursion
     if(level == 0){
@@ -24,7 +24,7 @@ public void drawCCurve(Canvas canvas, float x1, float y1, float x2, float y2, in
 
         //calculating midpoint
         float xn = (x1+x2)/2 + (y1-y2)/2;
-        float yn = (x1-x2)/2 + (y1+y2)/2;
+        float yn = (x2-x1)/2 + (y2+y1)/2;
 
         drawCCurve(canvas, x1, y1, xn, yn, level-1, lineColor);
         drawCCurve(canvas, xn, yn,x2, y2, level-1, lineColor);
